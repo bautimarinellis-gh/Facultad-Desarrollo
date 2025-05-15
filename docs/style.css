@@ -307,3 +307,25 @@ button[type="submit"]:hover {
         padding: 0.7rem 0 0.5rem 0;
     }
 }
+
+.site-title-bar {
+    width: 100vw;
+    height: 3px;
+    position: fixed;
+    left: 0;
+    pointer-events: none;
+    z-index: 101;
+}
+.site-title-bar.top {
+    top: 0;
+    background: linear-gradient(to bottom, #e0f2fa 60%, transparent 100%);
+}
+.site-title-bar.bottom {
+    top: calc(1rem + 2.2rem + 0.7rem); /* padding-top + font-size + padding-bottom */
+    background: linear-gradient(to top, #e0f2fa 60%, transparent 100%);
+}
+@media (max-width: 600px) {
+    .site-title-bar.bottom {
+        top: calc(0.7rem + 1.3rem + 0.5rem);
+    }
+}
